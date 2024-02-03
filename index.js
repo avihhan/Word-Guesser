@@ -3,6 +3,7 @@ current_word = '______';
 guessed_already = [];
 
 score = 50;
+multiplier = 1;
 
 var guessLetter = (guessed_letter) => {
     guessed_letter = guessed_letter.toLowerCase();
@@ -12,7 +13,8 @@ var guessLetter = (guessed_letter) => {
             console.log(`Correct Guess. You guessed: ${guessed_letter}`);
             all_indexes = getAllCharPositions(word, guessed_letter);
             current_word = replaceMultipleIndices(current_word, all_indexes, guessed_letter);
-            score += 10;
+            score += 10 * multiplier;
+            multiplier += 1;
             guessed_already.push(guessed_letter);
         }
         else {
@@ -22,6 +24,7 @@ var guessLetter = (guessed_letter) => {
     else {
         console.log(`Incorrect Guess. You guessed: ${guessed_letter}`);
         score -= 10;
+        multiplier = 1;
     }
     displayElement = document.getElementById('current_score');
     displayElement.innerHTML = `points: ${score}`;
