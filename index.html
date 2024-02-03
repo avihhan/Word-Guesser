@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="index.css">
+</head>
+
+<body>
+    <h2>Word Guesser</h2>
+    <div id="current_word"></div>
+
+    <!-- Input section -->
+    <div id="input_section">
+        <label for="userInput">Guess the character: </label>
+        <input type="text" id="userInput">
+        <button onclick="checkChar()">Check</button>
+    </div>
+
+    <!-- score -->
+    <div id="current_score"></div>
+    <button onclick="restart_game()"> Restart</button>
+</body>
+<script src="index.js"></script>
+
+</html>
