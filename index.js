@@ -1,5 +1,23 @@
-word = 'fluffy';
-current_word = '______';
+const word_list = [
+    "apple", "banana", "cherry", "dog", "elephant", "frog", "guitar", "happy", "igloo", "jungle",
+    "kitten", "lemon", "mountain", "notebook", "orange", "pizza", "quiet", "rainbow", "star", "turtle",
+    "umbrella", "violin", "watermelon", "xylophone", "yellow", "zebra", "basketball", "candle", "dinosaur",
+    "engine", "flamingo", "galaxy", "hammock", "island", "jigsaw", "koala", "lighthouse", "marshmallow",
+    "necklace", "octopus", "picnic", "quasar", "rocket", "snowflake", "telescope", "unicorn", "volcano",
+    "wizard", "xylograph", "yodel", "acrobat", "backpack", "caramel", "dragonfly", "elf", "firework",
+    "gnome", "hydrant", "inkwell", "jalapeno", "kumquat", "labyrinth", "moonlight", "nachos", "ocean",
+    "parrot", "quiver", "rhinestone", "saxophone", "trampoline", "underwater", "vortex", "waffle", "xanadu",
+    "yawn", "zipline", "bouquet", "cactus", "daffodil", "echidna", "frisbee", "galaxy", "hibiscus", "ivy",
+    "joystick", "kaleidoscope", "lightning", "marzipan", "nebula", "origami", "pancake", "quokka", "ravioli",
+    "sasquatch", "tangerine", "ukelele", "velvet", "whirlwind", "xylograph", "zamboni"
+];
+
+const randomIndex = Math.floor(Math.random() * word_list.length);
+
+word = word_list[randomIndex];
+console.log(word);
+
+current_word = '_'.repeat(word.length);
 guessed_already = [];
 
 score = 50;
